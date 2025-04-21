@@ -1,0 +1,129 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background:linear-gradient(135deg,#023047,#480488);
+    max-width: 100%;
+    height: 100vh;
+    color: white;
+}
+#container{
+    width: 100%;
+    max-width: 540px;
+    background: #fff;
+    color: black;
+    border-radius: 10px;
+    margin: 100px auto 20px;
+    padding: 40px 30px 70px;
+}
+#container h1{
+    font-size: 30px;
+    color: #002765;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+#container h1 img{
+    width: 30px;
+    margin-left: 10px;
+}
+
+#input_container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #edeef0;
+    border-radius: 30px;
+    padding-left: 20px;
+    margin-bottom: 25px;
+}
+#input_text{
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 10px;
+}
+#input_btn{
+    border: none;
+    outline: none;
+    background: #fb8500;
+    padding: 16px 50px;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 40px;
+    transition: color 0.5s ease;
+}
+#input_btn:hover{
+    color: #023047;
+}
+
+#list_items{
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    padding: 0px;
+} 
+
+#list_items li{
+    list-style: none;
+    font-size: 17px;
+    padding: 12px 8px 12px 50px;
+    border: none;
+    border-radius: 50px;
+    /* margin-bottom: 10px; */
+    cursor: pointer;
+    position: relative;
+    transition: background-color 0.5s ease;
+}
+
+#list_items li:hover{
+    background-color: #edeef0;
+}
+
+#list_items li::before{
+    content: '';
+    position: absolute;
+    height: 28px;
+    width: 28px;
+    border-radius: 50%;
+    background-image: url(./icons/radio.png);
+    background-size: cover;
+    background-position: center;
+    top: 10px; 
+    left: 8px;
+}
+
+#list_items li.completed{
+    text-decoration: line-through;
+    color: #555;
+}
+
+#list_items li.completed::before{
+    background-image: url(./icons/check-button_Green.png);
+}
+
+#list_items li button{
+    border: none;
+    border-radius: 50px;
+    position: absolute;
+    right: 5px;
+    background-color: white;
+    top: 3px;
+    width: 40px;
+    height: 40px;
+    font-size: 22px;
+    color: #555;
+    line-height: 40px;
+    text-align: center; 
+}
+
+#list_items li button:hover{
+    background-color: #fb8500;
+}
